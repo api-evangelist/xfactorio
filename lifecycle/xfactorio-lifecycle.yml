@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.xfactor.io/service-levels-support-services/
+sla:
+  url: https://www.xfactor.io/service-levels-support-services/
+  uptime_target: "99%"
+  measurement: calendar month, 24x7, excluding scheduled maintenance
+  service_credits:
+    - {availability: "90.01%-98%", credit: 25% of monthly fees}
+    - {availability: "80%-90%", credit: 35% of monthly fees}
+    - {availability: "below 80%", credit: 50% of monthly fees}
+support:
+  email: support@xfactor.io
+  hours: 8:00 AM - 6:00 PM ET weekdays, excluding US holidays
+  response_times:
+    - {priority: P1 major, target: 4 business hours}
+    - {priority: P2 minor, target: 2 business days}
+    - {priority: P3 inquiries, target: 2 business days}
+maintenance:
+  window: weekends (Friday midnight to Sunday midnight), outside normal business hours
+status_page: null
+versioning: null
+deprecation: null
+notes: >-
+  Xfactor.io publishes a Service Levels & Support Services page with a 99%
+  uptime commitment and a service-credit schedule for its SaaS platform. No
+  public status page, API versioning policy, or deprecation policy exists —
+  the platform is a closed B2B SaaS application with no public API surface,
+  so StatusPage and Deprecation rating pointers are not emitted.

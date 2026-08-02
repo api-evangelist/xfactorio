@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.xfactor.io/who-are-we/
+url: https://app.secureframe.com/ext/trust-center/xfactor-io/
+platform: Secureframe
+certifications:
+  - SOC 2 Type II
+security_controls:
+  - Data in transit encrypted HTTPS (TLS 1.2+)
+  - Data at rest encrypted AES-256
+  - Role-Based Access Control (field-level)
+  - SSO support via SAML
+  - Audit logging at application and infrastructure levels
+  - Data segregation (no commingled data)
+penetration_testing:
+  external: true
+  vendor: InGuardians
+subprocessors:
+  - Amazon Web Services
+evidence:
+  - source: https://app.secureframe.com/ext/trust-center/xfactor-io/
+    keywords: [SOC 2 Type II, penetration testing, subprocessors, trust center]
+  - source: https://www.xfactor.io/who-are-we/
+    kind: trust-center link on company page
+notes: >-
+  Secureframe-hosted trust center linked from the Xfactor.io "Who are we"
+  page. Lists a SOC 2 Type II attestation, external penetration testing by
+  InGuardians, and AWS as the primary subprocessor. No ISO 27001, GDPR,
+  CCPA, HIPAA, or PCI DSS claims are published on the trust center page.

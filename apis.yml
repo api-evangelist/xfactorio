@@ -1,7 +1,27 @@
 aid: xfactorio
 name: Xfactor.io
-description: 'Xfactor.io is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: services. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Xfactor.io is an AI-powered revenue operations platform founded by Mike
+  Carpenter and backed by Accel and Lightspeed Venture Partners. Its Growth AI
+  engine, together with the Xfactor Central, OpenInsights, and Simulation
+  products, builds a live digital twin of a company's go-to-market operations
+  — connecting CRM, pipeline, usage, and financial data so revenue teams can
+  test decisions through simulation before rolling them out. The platform is
+  delivered as a closed B2B SaaS application (app.xfactor.io) and does not
+  publish a public API, developer portal, or client SDKs; security posture is
+  documented on a Secureframe trust center with a SOC 2 Type II attestation.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.xfactor.io/wp-content/uploads/2026/01/xf-logo-white-inline-1.png
 url: https://raw.githubusercontent.com/api-evangelist/xfactorio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +31,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Services
+- Revenue Operations
+- Artificial Intelligence
+- Analytics
+- Forecasting
+- Go-To-Market
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +50,30 @@ maintainers:
 common:
 - type: Website
   url: https://www.xfactor.io/
+- type: Blog
+  url: https://www.xfactor.io/blog/
+- type: BlogRSS
+  url: https://www.xfactor.io/feed/
+- type: Support
+  url: https://www.xfactor.io/contact-us/
+- type: TermsOfService
+  url: https://www.xfactor.io/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.xfactor.io/privacy-notice/
+- type: GitHubOrganization
+  url: https://github.com/XFactor-IO
+- type: TrustCenter
+  url: security/xfactorio-trust-center.yml
+- type: Compliance
+  url: https://app.secureframe.com/ext/trust-center/xfactor-io/
+- type: Lifecycle
+  url: lifecycle/xfactorio-lifecycle.yml
+- type: DomainSecurity
+  url: security/xfactorio-domain-security.yml
+- type: LLMsTxt
+  url: llms/xfactorio-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

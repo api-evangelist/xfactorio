@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: probed
+source: live probe of /.well-known/* on Xfactor.io hosts (2026-07-21)
+description: >-
+  Probe of the /.well-known/ discovery surface on Xfactor.io's hosts. No
+  machine-readable discovery documents are published. www.xfactor.io is a
+  WordPress site that soft-200s unknown /.well-known/ paths with the regular
+  HTML page (recorded as soft-200, not saved — they are not well-known
+  documents); security.txt and llms.txt return real 404s. api.xfactor.io
+  exists (AWS ALB, plain-text 404 at every probed path) but exposes no
+  discovery surface; app.xfactor.io (the product login) returns 403 to
+  unauthenticated well-known requests. Absence is recorded as valid data; no
+  WellKnown rating pointer is emitted because no catalog was found.
+hosts:
+  - host: https://www.xfactor.io
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 200, note: soft-200 WordPress HTML page, real: false}
+      - {path: /.well-known/oauth-authorization-server, status: 200, note: soft-200 WordPress HTML page, real: false}
+      - {path: /.well-known/api-catalog, status: 200, note: soft-200 WordPress HTML page, real: false}
+      - {path: /.well-known/ai-plugin.json, status: 200, note: soft-200 WordPress HTML page, real: false}
+      - {path: /llms.txt, status: 404}
+  - host: https://api.xfactor.io
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://app.xfactor.io
+    documents:
+      - {path: /.well-known/security.txt, status: 403}
+      - {path: /.well-known/openid-configuration, status: 403}
+      - {path: /.well-known/oauth-authorization-server, status: 403}
+      - {path: /.well-known/api-catalog, status: 403}
+      - {path: /.well-known/ai-plugin.json, status: 403}
+      - {path: /llms.txt, status: 403}
