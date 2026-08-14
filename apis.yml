@@ -31,7 +31,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-13'
 tags:
 - Company
 - Services
@@ -62,6 +62,8 @@ common:
   url: https://www.xfactor.io/privacy-notice/
 - type: GitHubOrganization
   url: https://github.com/XFactor-IO
+- type: Login
+  url: https://app.xfactor.io/
 - type: TrustCenter
   url: security/xfactorio-trust-center.yml
 - type: Compliance
@@ -73,7 +75,29 @@ common:
 - type: LLMsTxt
   url: llms/xfactorio-llms.txt
 x-enrichment:
-  date: '2026-07-21'
-  status: enriched
-  artifacts_added: 5
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Xfactor.io ships only the closed app.xfactor.io SaaS product — its
+    api.xfactor.io host answers an nginx-ingress "default backend - 404" at
+    every OpenAPI, Swagger, GraphQL and docs path on the host root, no docs.,
+    developer. or mcp. subdomain resolves, the XFactor-IO GitHub organization
+    has zero public repositories, and the complete 24-page site sitemap
+    contains no developer, API or documentation page.
+  evidence:
+    - url: https://api.xfactor.io/openapi.json
+      status: 404
+    - url: https://api.xfactor.io/graphql
+      status: 404
+    - url: https://www.xfactor.io/page-sitemap.xml
+      status: 200
+    - url: https://www.xfactor.io/llms.txt
+      status: 404
+    - url: https://api.github.com/orgs/XFactor-IO/repos
+      status: 200
+  checked: '2026-08-13'
