@@ -1,0 +1,19 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry sweep of npm, PyPI and the XFactor-IO GitHub organization
+  (2026-08-13), plus the full www.xfactor.io page sitemap
+package_count: 0
+packages: []
+registries_searched:
+  - {registry: npm, query: "xfactor / xfactor.io / xfactorio", result: no first-party package; only unrelated third-party names}
+  - {registry: pypi, query: xfactorio, result: 404}
+  - {registry: pypi, query: xfactor, result: 200 but UNRELATED — a matplotlib pgf/svg backend helper by Yu-Hang Tang (github.com/yhtang), not Xfactor.io}
+  - {registry: github, org: XFactor-IO, url: https://github.com/XFactor-IO, result: organization exists with zero public repositories}
+notes: >-
+  Xfactor.io publishes no client libraries, SDKs or CLI in any public package
+  registry, and its GitHub organization carries no public repositories. The
+  company ships a closed B2B SaaS application (app.xfactor.io) with no public
+  API for an SDK to wrap, so this is an expected zero rather than a gap in the
+  sweep. No Packages or SDKs pointer is emitted in apis.yml — a recorded
+  absence must not be scored as a presence.

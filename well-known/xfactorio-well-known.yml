@@ -1,38 +1,53 @@
-generated: '2026-07-21'
+generated: '2026-08-13'
 method: probed
-source: live probe of /.well-known/* on Xfactor.io hosts (2026-07-21)
+source: live probe of /.well-known/* and contract-discovery paths on Xfactor.io hosts (2026-08-13)
 description: >-
-  Probe of the /.well-known/ discovery surface on Xfactor.io's hosts. No
-  machine-readable discovery documents are published. www.xfactor.io is a
-  WordPress site that soft-200s unknown /.well-known/ paths with the regular
-  HTML page (recorded as soft-200, not saved — they are not well-known
-  documents); security.txt and llms.txt return real 404s. api.xfactor.io
-  exists (AWS ALB, plain-text 404 at every probed path) but exposes no
-  discovery surface; app.xfactor.io (the product login) returns 403 to
-  unauthenticated well-known requests. Absence is recorded as valid data; no
-  WellKnown rating pointer is emitted because no catalog was found.
+  Second-round probe of the /.well-known/ discovery surface plus the STEP 0b
+  contract-discovery paths on every Xfactor.io host. No machine-readable
+  discovery document is published anywhere. www.xfactor.io (WordPress behind a
+  WAF) now 301-redirects unknown /.well-known/* paths to the homepage — the
+  July soft-200s are gone, but the result is the same non-document; a real 404
+  is returned for security.txt and llms.txt. api.xfactor.io resolves and
+  answers with an nginx-ingress plain-text "default backend - 404" at every
+  path probed, including the API-host-root OpenAPI locations, so it is an
+  internal application backend rather than a published API. app.xfactor.io is
+  a Next.js single-page product login that serves the same 1,844-byte HTML
+  shell for every path (403 on /.well-known/*), which is why no 200 there can
+  be treated as a document. No WellKnown, SecurityTxt or AgentCard pointer is
+  emitted: absence is recorded as valid data, not as a served surface.
 hosts:
   - host: https://www.xfactor.io
     documents:
       - {path: /.well-known/security.txt, status: 404}
-      - {path: /.well-known/openid-configuration, status: 200, note: soft-200 WordPress HTML page, real: false}
-      - {path: /.well-known/oauth-authorization-server, status: 200, note: soft-200 WordPress HTML page, real: false}
-      - {path: /.well-known/api-catalog, status: 200, note: soft-200 WordPress HTML page, real: false}
-      - {path: /.well-known/ai-plugin.json, status: 200, note: soft-200 WordPress HTML page, real: false}
+      - {path: /.well-known/agent-card.json, status: 301, note: redirects to https://www.xfactor.io/ (HTML), real: false}
+      - {path: /.well-known/agent.json, status: 301, note: redirects to https://www.xfactor.io/ (HTML), real: false}
       - {path: /llms.txt, status: 404}
+      - {path: /openapi.json, status: 403, note: WAF block page (HTML), real: false}
   - host: https://api.xfactor.io
     documents:
       - {path: /.well-known/security.txt, status: 404}
-      - {path: /.well-known/openid-configuration, status: 404}
-      - {path: /.well-known/oauth-authorization-server, status: 404}
-      - {path: /.well-known/api-catalog, status: 404}
-      - {path: /.well-known/ai-plugin.json, status: 404}
-      - {path: /llms.txt, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /openapi.json, status: 404}
+      - {path: /openapi.yaml, status: 404}
+      - {path: /swagger.json, status: 404}
+      - {path: /v1/openapi.json, status: 404}
+      - {path: /api-docs, status: 404}
+      - {path: /docs, status: 404}
+      - {path: /redoc, status: 404}
+      - {path: /graphql, status: 404}
+      - {path: /, status: 404, note: nginx ingress "default backend - 404"}
   - host: https://app.xfactor.io
     documents:
-      - {path: /.well-known/security.txt, status: 403}
-      - {path: /.well-known/openid-configuration, status: 403}
-      - {path: /.well-known/oauth-authorization-server, status: 403}
-      - {path: /.well-known/api-catalog, status: 403}
-      - {path: /.well-known/ai-plugin.json, status: 403}
-      - {path: /llms.txt, status: 403}
+      - {path: /.well-known/agent-card.json, status: 403, note: Next.js SPA shell (HTML), real: false}
+      - {path: /.well-known/agent.json, status: 403, note: Next.js SPA shell (HTML), real: false}
+      - {path: /openapi.json, status: 403, note: Next.js SPA shell (HTML), real: false}
+      - {path: /swagger.json, status: 403, note: Next.js SPA shell (HTML), real: false}
+      - {path: /api/openapi.json, status: 404}
+      - {path: /, status: 200, note: product login SPA, not a discovery document, real: false}
+subdomains_checked:
+  - {host: docs.xfactor.io, dns: NXDOMAIN}
+  - {host: developer.xfactor.io, dns: NXDOMAIN}
+  - {host: api-docs.xfactor.io, dns: NXDOMAIN}
+  - {host: mcp.xfactor.io, dns: NXDOMAIN}
+  - {host: status.xfactor.io, dns: NXDOMAIN}

@@ -1,0 +1,17 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.xfactor.io/page-sitemap.xml
+plan_count: 0
+plans: []
+pricing_model: contact-sales
+signup: https://www.xfactor.io/get-a-demo/
+evidence:
+  - {url: 'https://www.xfactor.io/pricing/', status: 301, note: redirects to the homepage — no pricing page exists}
+  - {url: 'https://www.xfactor.io/page-sitemap.xml', status: 200, note: complete 24-page inventory contains no pricing, plans or packaging page}
+notes: >-
+  Xfactor.io publishes no pricing, plans or packaging page. The complete Yoast
+  page sitemap (24 pages) lists no pricing URL, and /pricing/ 301s to the
+  homepage like every other unknown path on the WordPress site. The only
+  commercial entry point is the "Get a demo" request form, so the platform is
+  sold entirely through a sales conversation. plan_count is an honest zero;
+  no Pricing or Plans link pointer is emitted because no such page exists.

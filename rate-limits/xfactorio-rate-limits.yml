@@ -1,0 +1,18 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  full www.xfactor.io page sitemap review + live probes of api.xfactor.io and
+  app.xfactor.io (2026-08-13)
+limit_count: 0
+rate_limits: []
+headers: []
+evidence:
+  - {url: 'https://www.xfactor.io/page-sitemap.xml', status: 200, note: no developer, API or documentation page in the 24-page site inventory}
+  - {url: 'https://api.xfactor.io/', status: 404, note: nginx ingress default backend — no unauthenticated response carrying rate-limit headers}
+notes: >-
+  No published rate limits. Xfactor.io documents no API, so there is no
+  documented quota, window, burst allowance or exhaustion status code, and no
+  unauthenticated endpoint returns X-RateLimit-*, RateLimit-* or Retry-After
+  headers to observe. Recorded as an honest zero; no RateLimits pointer is
+  emitted in apis.yml, because a rate-limit signal an agent could act on does
+  not exist here.
