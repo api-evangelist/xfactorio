@@ -10,6 +10,17 @@ description: >-
   delivered as a closed B2B SaaS application (app.xfactor.io) and does not
   publish a public API, developer portal, or client SDKs; security posture is
   documented on a Secureframe trust center with a SOC 2 Type II attestation.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
