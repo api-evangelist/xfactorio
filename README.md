@@ -64,6 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Xfactor.io is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: services. This profile is a lead awaiting the enrichment pipeline.
+Xfactor.io is an AI-powered revenue operations platform founded by Mike Carpenter and backed by Accel and Lightspeed Venture Partners. Its Growth AI engine, together with the Xfactor Central, OpenInsights, and Simulation products, builds a live digital twin of a company's go-to-market operations — connecting CRM, pipeline, usage, and financial data so revenue teams can test decisions through simulation before rolling them out. The platform is delivered as a closed B2B SaaS application (app.xfactor.io) and does not publish a public API, developer portal, or client SDKs; security posture is documented on a Secureframe trust center with a SOC 2 Type II attestation.
 
-Backed by: accel — https://www.xfactor.io/
+**Areas:** Company · Services · Revenue Operations · Artificial Intelligence · Analytics · Forecasting · Go-To-Market · Software-as-a-Service
+
+## Xfactor.io on APIs.io
+
+Everything profiled for Xfactor.io is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/xfactorio/](https://apis.io/providers/xfactorio/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/xfactorio/](https://apis.io/servers/xfactorio/xfactorio/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Xfactorio Domain Security](https://apis.io/security/xfactorio/xfactorio-domain-security/)
+- [Xfactorio Trust Center](https://apis.io/security/xfactorio/xfactorio-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Xfactorio Plans Pricing](https://apis.io/plans/xfactorio/xfactorio-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Xfactorio Rate Limits](https://apis.io/rate-limits/xfactorio/xfactorio-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.xfactor.io/)
+- [Support](https://www.xfactor.io/contact-us/)
+- [Blog](https://www.xfactor.io/blog/)
+- [Compliance](https://app.secureframe.com/ext/trust-center/xfactor-io/)
+- [Terms of service](https://www.xfactor.io/terms-of-use/)
+- [Privacy policy](https://www.xfactor.io/privacy-notice/)
+- [GitHub](https://github.com/XFactor-IO)
+
+## API Evangelist rating
+
+**Kin Score 9.2** — minimal · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.7 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 22.4 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/xfactorio/](https://apis.io/providers/xfactorio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Xfactor.io: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/xfactorio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
